@@ -24,6 +24,14 @@ Available variables are listed below, along with default values:
     ssp_cron_enable: False
     ssp_refresh_key: secret
 
+
+How to install
+--------------
+
+    ansible-galaxy install cybera.ssp_install
+
+For more installation's options/variants read the documentation: http://docs.ansible.com/galaxy.html
+
 ## Dependencies
 
 None
@@ -32,8 +40,8 @@ None
 
     - hosts: idp
       roles:
-        - { role: ssp_install }
+        - { role: cybera.ssp_install }
 
 ## License
 
-
+GPLv2
