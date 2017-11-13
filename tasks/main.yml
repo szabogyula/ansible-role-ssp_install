@@ -6,14 +6,14 @@
     - memcached
     - libgcrypt11-dev
     - zlib1g-dev
-    - libapache2-mod-php5
-    - php5-sasl
-    - php5-mcrypt
-    - php5-memcache
-    - php5-memcached
-    - php5-mysql
-    - php5-ldap
-    - php5-gd
+    - libapache2-mod-php
+    - php-sasl
+    - php-mcrypt
+    - php-memcache
+    - php-memcached
+    - php-mysql
+    - php-ldap
+    - php-gd
     - acl
   become: yes
 
