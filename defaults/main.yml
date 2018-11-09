@@ -1,5 +1,5 @@
-ssp_ver: 1.14.4
-ssp_sha256: cf0fe8534c93be8073e70fa84556971711543293d4be65edb890335861d2e6b9
+ssp_ver: 1.16.2
+ssp_sha256: https://github.com/szabogyula/ansible-role-ssp_install.git
 ssp_url: https://simplesamlphp.org/res/downloads/simplesamlphp-{{ ssp_ver }}.tar.gz
 
 ssp_domain: localhost.local

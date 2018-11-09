@@ -1,20 +1,25 @@
 ## Do things that require root
 - name: Ensure packages present
-  apt: name={{ item }} state=present update_cache=yes cache_valid_time=3600
-  with_items:
-    - apache2
-    - memcached
-    - libgcrypt11-dev
-    - zlib1g-dev
-    - libapache2-mod-php
-    - php-sasl
-    - php-mcrypt
-    - php-memcache
-    - php-memcached
-    - php-mysql
-    - php-ldap
-    - php-gd
-    - acl
+  apt:
+    name: {{ packages }}
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+  vars:
+    packages:
+      - apache2
+      - memcached
+      - libgcrypt11-dev
+      - zlib1g-dev
+      - libapache2-mod-php
+      - php-sasl
+      - php-mcrypt
+      - php-memcache
+      - php-memcached
+      - php-mysql
+      - php-ldap
+      - php-gd
+      - acl
   become: yes
 
 - name: Enable apache rewrite module
