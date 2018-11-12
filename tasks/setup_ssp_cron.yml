@@ -6,7 +6,7 @@
     hour="0"
     state=present
     job="curl --silent 'http://{{ ssp_domain }}/simplesaml/module.php/cron/cron.php?key={{ ssp_refresh_key }}&tag=daily' > /dev/null 2>&1"
-  when: "{{ ssp_cron_enable }}"
+  when: ssp_cron_enable
 
 - name: Setup simplesaml hourly cron
   cron:
@@ -15,7 +15,7 @@
     minute="1"
     state=present
     job="curl --silent 'http://{{ ssp_domain }}/simplesaml/module.php/cron/cron.php?key={{ ssp_refresh_key }}&tag=hourly' > /dev/null 2>&1"
-  when: "{{ ssp_cron_enable }}"
+  when: ssp_cron_enable
 
 - name: Disable simplesaml daily cron
   cron:
